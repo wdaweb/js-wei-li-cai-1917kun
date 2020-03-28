@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const random = (min, max) => {
+            return Math.round(Math.random() * (max - min)) + min
+        }
+
+
+        let ar = [];
+        for (let i = 0; i < 6; i++) {
+            let num = random(1, 38);
+            console.log("剛進來ar=" + ar + "num=" + num);
+
+            // ar.push(random(1, 38))
+            while (ar.includes(num)) {
+                num = random(1, 38);
+
+                console.log("重新ar=" + ar + "num=" + num);
+            }
+            ar[i] = num;
+            console.log("結果ar=" + ar + "num=" + num);
+        }
+        let b = random(1, 8)
+        // for (let j = 0; j < 6; j++) {
+        //     let num1 = ar[j]
+        //     while(b.includes(num1) ){
+
+        //     }
+        // }
+        // for (let j = 0; j < 6; j++) {
+        //     if (b !== ar[j]) {
+        //         // b=random(1,8)
+        //         document.write(`B區為:${b}<br>`)
+        //         break;
+        //     }
+        // }
+
+        while(ar.includes(b)){
+            b=random(1,8);        
+        }
+
+        document.write(`A區為:${ar}<br>`)
+        document.write(`B區為:${b}<br>`)
+        document.write(`耶我完成作業了ㄟ好棒棒!`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let arr = [1,2,3,4];
+        // document.write(arr);
+
+        // -------------------------------------------------------------------
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
